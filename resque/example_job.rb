@@ -3,7 +3,7 @@ class ExampleJob
     :main
   end
 
-  def self.perform
+  def self.perform(useless_param)
     sleep 10   #really hard task to do
   end
 end
