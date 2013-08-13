@@ -1,9 +1,9 @@
 class ExampleJob
-  def queue
+  def self.queue
     :main
   end
 
   def self.perform
-     sleep 10   #really hard task to do
+    sleep 10   #really hard task to do
   end
 end
