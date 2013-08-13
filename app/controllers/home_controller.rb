@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    render :text => "Hello!"
+    Resque.enqueue(ExampleJob, "some-cool-parameter")
+    render :text => "Job inserted into the queue!"
   end
 end
